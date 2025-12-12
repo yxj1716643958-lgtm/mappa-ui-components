@@ -41,3 +41,22 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* 作品展示滚动动画 */
+@keyframes scroll-smooth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 5 - 40px * 5));
+  }
+}
+
+.animate-scroll-smooth {
+  animation: scroll-smooth 50s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-smooth:hover {
+  animation-play-state: paused;
+}

@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function WorksSection() {
-  const { language } = useLanguage();
+  // 临时硬编码语言为中文来测试
+  const language = "zh";
 
   const worksTitle = {
     zh: "作品展示",
@@ -184,25 +183,7 @@ export default function WorksSection() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes scroll-smooth {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-300px * 5 - 40px * 5));
-          }
-        }
 
-        .animate-scroll-smooth {
-          animation: scroll-smooth 50s linear infinite;
-          will-change: transform;
-        }
-
-        .animate-scroll-smooth:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }
