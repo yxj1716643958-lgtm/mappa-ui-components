@@ -2,6 +2,10 @@
 const nextConfig = {
   images: {
     unoptimized: true
+  },
+  // Fix for Vercel deployment
+  experimental: {
+    esmExternals: false
   }
 }
 
