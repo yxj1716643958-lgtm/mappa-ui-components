@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
+  // 临时硬编码语言为中文，避免构建问题
+  const [language, setLanguageState] = useState<"zh" | "ja">("zh");
+  const setLanguage = (lang: "zh" | "ja") => setLanguageState(lang);
 
   const navItems = {
     zh: [
