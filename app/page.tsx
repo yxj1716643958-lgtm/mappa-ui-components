@@ -21,15 +21,65 @@ export default function Home() {
       </header>
 
       {/* 简化的Hero */}
-      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800" style={{ background: 'linear-gradient(to bottom right, #111827, #000000, #1f2937)' }}>
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-red-900/10 rounded-full blur-3xl"></div>
+      <section
+        className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
+        style={{
+          background: 'linear-gradient(to bottom right, #111827, #000000, #1f2937)',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        <div className="absolute inset-0 z-0" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
+          <div
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-3xl"
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: '800px',
+              height: '800px',
+              backgroundColor: 'rgba(220, 38, 38, 0.1)',
+              borderRadius: '50%',
+              filter: 'blur(48px)'
+            }}
+          ></div>
+          <div
+            className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-red-900/10 rounded-full blur-3xl"
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '800px',
+              height: '800px',
+              backgroundColor: 'rgba(127, 29, 29, 0.1)',
+              borderRadius: '50%',
+              filter: 'blur(48px)'
+            }}
+          ></div>
         </div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-wider">UKA</h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">长春出口合一动画有限公司</p>
-          <div className="text-lg text-gray-400">动画制作工作室</div>
+        <div className="relative z-10 text-center text-white" style={{ position: 'relative', zIndex: 10, textAlign: 'center', color: 'white' }}>
+          <h1
+            className="text-6xl md:text-8xl font-bold mb-6 tracking-wider"
+            style={{ fontSize: '6rem', fontWeight: 'bold', marginBottom: '1.5rem', letterSpacing: '0.1em', color: 'white' }}
+          >
+            UKA
+          </h1>
+          <p
+            className="text-xl md:text-2xl text-gray-300 mb-8"
+            style={{ fontSize: '1.5rem', color: '#d1d5db', marginBottom: '2rem' }}
+          >
+            长春出口合一动画有限公司
+          </p>
+          <div
+            className="text-lg text-gray-400"
+            style={{ fontSize: '1.125rem', color: '#9ca3af' }}
+          >
+            动画制作工作室
+          </div>
         </div>
       </section>
 
