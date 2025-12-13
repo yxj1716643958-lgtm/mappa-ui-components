@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function WorksSection() {
-  const { language } = useLanguage();
+  // 硬编码为中文，避免LanguageContext构建问题
+  const language = "zh";
 
   const worksTitle = {
     zh: "作品展示",
