@@ -1,7 +1,7 @@
 "use client";
 
 export default function WorksSection() {
-  // 硬编码为中文，避免LanguageContext构建问题
+  // 硬编码为中文，避免Vercel构建问题
   const language = "zh";
 
   const worksTitle = {
@@ -182,8 +182,6 @@ export default function WorksSection() {
           </div>
         </div>
       </div>
-
-
     </section>
   );
 }

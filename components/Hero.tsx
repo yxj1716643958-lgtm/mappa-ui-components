@@ -52,7 +52,18 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-black">
+    <section
+      className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-black"
+      style={{
+        height: '100vh',
+        backgroundColor: '#000000',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden'
+      }}
+    >
       {/* Background Video */}
       <div className="absolute inset-0 z-0 scale-105">
         <video
