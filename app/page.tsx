@@ -2,7 +2,7 @@
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white" style={{ backgroundColor: '#000000', color: '#ffffff' }}>
       {/* 简化的Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-red-900/20">
         <div className="max-w-7xl mx-auto px-6">
@@ -21,7 +21,7 @@ export default function Home() {
       </header>
 
       {/* 简化的Hero */}
-      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
+      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800" style={{ background: 'linear-gradient(to bottom right, #111827, #000000, #1f2937)' }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-red-900/10 rounded-full blur-3xl"></div>
@@ -34,7 +34,7 @@ export default function Home() {
       </section>
 
       {/* 简化的作品展示 */}
-      <section className="py-32 bg-black">
+      <section className="py-32 bg-black" style={{ backgroundColor: '#000000' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-wider">作品展示</h2>
