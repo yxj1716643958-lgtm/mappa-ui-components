@@ -1,11 +1,11 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import Image from "next/image";
 
 export default function CompanySection() {
-  const { language } = useLanguage();
+  // 硬编码为中文，避免Vercel构建问题
+  const language = "zh";
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const content = {
@@ -92,7 +92,7 @@ export default function CompanySection() {
   const t = content[language];
 
   return (
-    <section id="company" className="py-32 bg-black relative overflow-hidden">
+    <section id="company" className="py-20 bg-black relative overflow-hidden">
       {/* 动态背景 */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-3xl animate-pulse"></div>
@@ -113,30 +113,30 @@ export default function CompanySection() {
 
       <div className="max-w-[1600px] mx-auto px-6 relative z-10">
         {/* 标题区域 */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block relative">
             <div className="absolute -left-24 top-1/2 w-20 h-0.5 bg-gradient-to-r from-transparent to-red-600"></div>
             <div className="absolute -right-24 top-1/2 w-20 h-0.5 bg-gradient-to-l from-transparent to-red-600"></div>
 
-            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-wider relative">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wider relative">
               {t.title}
               <span className="absolute inset-0 blur-2xl opacity-30 text-red-600">
                 {t.title}
               </span>
             </h2>
-            <p className="text-2xl text-red-500 font-medium mb-6">{t.subtitle}</p>
+            <p className="text-xl text-red-500 font-medium mb-4">{t.subtitle}</p>
             <div className="h-1.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
           </div>
 
           <div className="max-w-4xl mx-auto mt-8">
-            <p className="text-gray-300 text-xl leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed">
               {t.description}
             </p>
           </div>
         </div>
 
         {/* 数据统计 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {t.stats.map((stat, index) => (
             <div
               key={index}
@@ -161,9 +161,9 @@ export default function CompanySection() {
         </div>
 
         {/* 核心业务标题 */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-block relative">
-            <h3 className="text-5xl font-bold text-white mb-4 tracking-wider">
+            <h3 className="text-3xl font-bold text-white mb-3 tracking-wider">
               {t.businessTitle}
             </h3>
             <div className="h-1 w-32 bg-gradient-to-r from-red-600 to-red-900 mx-auto"></div>

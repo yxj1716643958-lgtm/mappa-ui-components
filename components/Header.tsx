@@ -26,14 +26,14 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-red-900/20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <a href="#home" className="flex items-center">
               <img
                 src="/images/img_002.jpg"
                 alt="UKA Logo"
-                className="h-20 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </a>
           </div>
@@ -44,7 +44,7 @@ export default function Header() {
               <a
                 key={index}
                 href={item.href}
-                className="text-xl font-semibold text-gray-300 hover:text-red-500 transition-colors duration-300 relative group"
+                className="text-lg font-semibold text-gray-300 hover:text-red-500 transition-colors duration-300 relative group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 group-hover:w-full transition-all duration-300"></span>
@@ -55,7 +55,7 @@ export default function Header() {
             <div className="flex items-center gap-3 ml-6 border-l border-zinc-800 pl-6">
               <button
                 onClick={() => setLanguage("zh")}
-                className={`text-base font-medium px-5 py-2.5 rounded transition-all duration-300 ${
+                className={`text-sm font-medium px-4 py-2 rounded transition-all duration-300 ${
                   language === "zh"
                     ? "bg-red-600 text-white"
                     : "text-gray-400 hover:text-white"
@@ -65,7 +65,7 @@ export default function Header() {
               </button>
               <button
                 onClick={() => setLanguage("ja")}
-                className={`text-base font-medium px-5 py-2.5 rounded transition-all duration-300 ${
+                className={`text-sm font-medium px-4 py-2 rounded transition-all duration-300 ${
                   language === "ja"
                     ? "bg-red-600 text-white"
                     : "text-gray-400 hover:text-white"
@@ -97,7 +97,7 @@ export default function Header() {
                 <a
                   key={index}
                   href={item.href}
-                  className="text-base text-gray-300 hover:text-red-500 transition-colors"
+                  className="text-sm text-gray-300 hover:text-red-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

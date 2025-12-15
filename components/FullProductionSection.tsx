@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function FullProductionSection() {
-  const { language } = useLanguage();
+  // 硬编码为中文，避免Vercel构建问题
+  const language = "zh";
 
   const sectionTitle = {
     zh: "全流程承制作品",
@@ -67,7 +66,7 @@ export default function FullProductionSection() {
   ];
 
   return (
-    <section id="full-production" className="py-32 bg-zinc-900 relative overflow-hidden">
+    <section id="full-production" className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* 背景装饰 */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-red-900/10 rounded-full blur-3xl"></div>
@@ -76,9 +75,9 @@ export default function FullProductionSection() {
 
       <div className="max-w-[1600px] mx-auto px-6 relative z-10">
         {/* 标题 */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block">
-            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wider">
               {sectionTitle[language]}
             </h2>
             <div className="h-1.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>

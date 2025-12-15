@@ -1,11 +1,11 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function NewsSection() {
-  const { language } = useLanguage();
+  // 硬编码为中文，避免Vercel构建问题
+  const language = "zh";
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
@@ -96,7 +96,7 @@ export default function NewsSection() {
   };
 
   return (
-    <section id="news" className="py-32 bg-black relative overflow-hidden">
+    <section id="news" className="py-20 bg-black relative overflow-hidden">
       {/* 动态背景 */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent animate-scan"></div>
@@ -106,11 +106,11 @@ export default function NewsSection() {
 
       <div className="max-w-[1800px] mx-auto px-6 relative z-10">
         {/* 标题 */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block relative">
             <div className="absolute -left-24 top-1/2 w-20 h-0.5 bg-gradient-to-r from-transparent to-red-600"></div>
             <div className="absolute -right-24 top-1/2 w-20 h-0.5 bg-gradient-to-l from-transparent to-red-600"></div>
-            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-wider relative">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wider relative">
               {newsTitle[language]}
               <span className="absolute inset-0 blur-2xl opacity-30 text-red-600">
                 {newsTitle[language]}

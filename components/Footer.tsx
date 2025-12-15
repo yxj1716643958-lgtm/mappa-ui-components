@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function Footer() {
-  const { language } = useLanguage();
+  // 硬编码为中文，避免Vercel构建问题
+  const language = "zh";
 
   const footerContent = {
     zh: {
@@ -27,12 +26,12 @@ export default function Footer() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-600 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 py-12 relative z-10">
         {/* 主要内容 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo 和简介 */}
           <div className="md:col-span-1">
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-2xl font-bold mb-3">
               <span className="text-white">U</span>
               <span className="text-red-600">K</span>
               <span className="text-white">A</span>
@@ -118,7 +117,7 @@ export default function Footer() {
         </div>
 
         {/* 底部版权 */}
-        <div className="border-t border-zinc-900 pt-8">
+        <div className="border-t border-zinc-900 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
             <div className="text-center md:text-left">
               <p className="mb-1">

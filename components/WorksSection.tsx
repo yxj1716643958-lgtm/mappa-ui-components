@@ -58,7 +58,7 @@ export default function WorksSection() {
   ];
 
   return (
-    <section id="works" className="py-32 bg-black relative overflow-hidden">
+    <section id="works" className="py-20 bg-black relative overflow-hidden">
       {/* 背景装饰 */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-3xl"></div>
@@ -67,9 +67,9 @@ export default function WorksSection() {
 
       <div className="max-w-[1600px] mx-auto px-6 relative z-10">
         {/* 标题 */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block">
-            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wider">
               {worksTitle[language]}
             </h2>
             <div className="h-1.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
@@ -116,7 +116,7 @@ export default function WorksSection() {
                         href={work.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-base font-bold transition-all duration-300 shadow-2xl"
+                        className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold transition-all duration-300 shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {watchText[language]} →
@@ -125,12 +125,12 @@ export default function WorksSection() {
                   </div>
 
                   {/* 标题 */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-red-500 transition-colors duration-300">
                     {language === "zh" ? work.title : work.titleJa}
                   </h3>
 
                   {/* 集数 */}
-                  <p className="text-base text-gray-400 font-mono tracking-wider">
+                  <p className="text-sm text-gray-400 font-mono tracking-wider">
                     {work.episodes}
                   </p>
                 </div>
@@ -161,7 +161,7 @@ export default function WorksSection() {
                         href={work.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-base font-bold transition-all duration-300 shadow-2xl"
+                        className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold transition-all duration-300 shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {watchText[language]} →
@@ -169,11 +169,11 @@ export default function WorksSection() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-red-500 transition-colors duration-300">
                     {language === "zh" ? work.title : work.titleJa}
                   </h3>
 
-                  <p className="text-base text-gray-400 font-mono tracking-wider">
+                  <p className="text-sm text-gray-400 font-mono tracking-wider">
                     {work.episodes}
                   </p>
                 </div>

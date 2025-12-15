@@ -1,9 +1,8 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function CelShadeSection() {
-  const { language } = useLanguage();
+  // 硬编码为中文，避免Vercel构建问题
+  const language = "zh";
 
   const works = [
     { id: 1, image: "/images/img_023.jpg" },
@@ -17,7 +16,7 @@ export default function CelShadeSection() {
   ];
 
   return (
-    <section className="py-32 bg-black relative overflow-hidden">
+    <section className="py-20 bg-black relative overflow-hidden">
       {/* 背景装饰 */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-3xl"></div>
@@ -26,14 +25,14 @@ export default function CelShadeSection() {
 
       <div className="max-w-[1600px] mx-auto px-6 relative z-10">
         {/* 标题 */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block">
-            <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-wider">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wider">
               {language === "zh" ? "三渲二制作作品" : "Cel-Shaded Production"}
             </h2>
             <div className="h-1.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
           </div>
-          <p className="text-gray-400 text-lg mt-6">
+          <p className="text-gray-400 text-base mt-4">
             {language === "zh"
               ? "将3D技术与2D美学完美融合，呈现独特的视觉风格"
               : "Perfectly blending 3D technology with 2D aesthetics"}
